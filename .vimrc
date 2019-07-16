@@ -14,3 +14,7 @@ au BufRead,BufNewFile *.yml set filetype=yaml.ansible
 " Map movement through errors without wrapping.
 nmap <silent> <C-k> <Plug>(ale_previous)
 nmap <silent> <C-j> <Plug>(ale_next)
+" move among buffers
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
+:nnoremap <C-X> :bdelete<CR>
