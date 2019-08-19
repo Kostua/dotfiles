@@ -8,3 +8,4 @@ alias ll='ls -la'
 alias rm='rm -i'
 alias config='/usr/bin/git --git-dir=/Users/kostua/.cfg/ --work-tree=/Users/kostua'
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH=~/bin:$PATH
