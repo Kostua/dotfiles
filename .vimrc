@@ -7,6 +7,7 @@ autocmd FileType yaml setlocal ai ts=2 sw=2 et
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'w0rp/ale'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 colorscheme gruvbox
