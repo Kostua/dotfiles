@@ -100,6 +100,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+**/.sts4-cache/*
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -328,7 +329,7 @@ local.properties
 .classpath
 .project
 
-Node
+# Node
 # Logs
 logs
 *.log
@@ -383,7 +384,7 @@ typings/
 
 # Optional eslint cache
 .eslintcache
-
+.eslintrc.*
 # Microbundle cache
 .rpt2_cache/
 .rts2_cache_cjs/
@@ -428,3 +429,10 @@ public
 # DynamoDB Local files
 .dynamodb/
 
+# VisualStudioCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.vscode/
