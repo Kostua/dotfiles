@@ -115,6 +115,5 @@ export PROJECT_HOME=$HOME/Documents/Python/Projects
 export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
 source /usr/local/bin/virtualenvwrapper_lazy.sh
 export PYTHONDONTWRITEBYTECODE=1
-set -o vi
 export HISTORY_IGNORE="pwd|ls|ls -ltr|vault"
 alias config='/usr/bin/git --git-dir=/Users/kostua/.cfg/ --work-tree=/Users/kostua'
