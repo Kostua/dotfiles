@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # Run CentOS 8
 alias cnos="cd ~/Vagrant/Centos8 && vagrant up && vagrant ssh"
 # Run Vault
-alias vlt="cd ~/Vault/unseal/ && ./unseal.sh"
+alias vlt="cd ~/Vault/unseal/ && ./unseal.sh && cd ~/Jenkins && docker-compose up -d"
 complete -C '/usr/local/bin/aws_completer' aws
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
@@ -115,5 +115,7 @@ export PROJECT_HOME=$HOME/Documents/Python/Projects
 export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
 source /usr/local/bin/virtualenvwrapper_lazy.sh
 export PYTHONDONTWRITEBYTECODE=1
-export HISTORY_IGNORE="pwd|ls|ls -ltr|vault"
+export HISTORY_IGNORE="(pwd|ls|ls -ltr|vault)"
 alias config='/usr/bin/git --git-dir=/Users/kostua/.cfg/ --work-tree=/Users/kostua'
+# Homebrew's sbin
+export PATH="/usr/local/sbin:$PATH"
