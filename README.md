@@ -27,7 +27,7 @@ If you use the zsh setup, your .zshrc file must load in the alias file with sour
 
 Line 4 sets a local configuration in .cfg to ignore untracked files.
 
-# How its work
+# Usage
 
 ```
 config status
