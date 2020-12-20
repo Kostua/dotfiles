@@ -98,8 +98,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # 
-# Run CentOS 8
-alias cnos="cd ~/Vagrant/Centos8 && vagrant up && vagrant ssh"
+# Run Amazon Linux 2
+alias amzn="cd ~/Vagrant/Amzn2 && vagrant up && vagrant ssh"
 # Run Vault
 alias vlt="cd ~/Vault/unseal/ && ./unseal.sh && cd ~/Jenkins && docker-compose up -d"
 complete -C '/usr/local/bin/aws_completer' aws
