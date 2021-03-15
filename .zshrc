@@ -110,10 +110,11 @@ export VAULT_ADDR='http://127.0.0.1:8200'
 autoload -Uz compinit
 compinit
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Documents/Python/Projects
 export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
-source /usr/local/bin/virtualenvwrapper_lazy.sh
+source /usr/local/bin/virtualenvwrapper.sh
 export PYTHONDONTWRITEBYTECODE=1
 export HISTORY_IGNORE="(pwd|ls|ls -ltr|vault)"
 alias config='/usr/bin/git --git-dir=/Users/kostua/.cfg/ --work-tree=/Users/kostua'
