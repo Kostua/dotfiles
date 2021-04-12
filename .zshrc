@@ -121,3 +121,9 @@ export HISTORY_IGNORE="(pwd|ls|ls -ltr|vault)"
 alias config='/usr/bin/git --git-dir=/Users/kostua/.cfg/ --work-tree=/Users/kostua'
 # Homebrew's sbin
 export PATH="/usr/local/sbin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/kostua/Gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kostua/Gcloud/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/kostua/Gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kostua/Gcloud/google-cloud-sdk/completion.zsh.inc'; fi
