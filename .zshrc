@@ -100,6 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # 
 # Run Amazon Linux 2
 alias amzn="cd ~/Vagrant/Amzn2 && vagrant up && vagrant ssh"
+alias dbn="cd ~/Vagrant/Debian9 && vagrant up && vagrant ssh"
 # Run Vault
 alias vlt="cd ~/Vault/unseal/ && ./unseal.sh && cd ~/Jenkins && docker-compose up -d"
 complete -C '/usr/local/bin/aws_completer' aws
