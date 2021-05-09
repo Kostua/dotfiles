@@ -102,7 +102,8 @@ source $ZSH/oh-my-zsh.sh
 alias amzn="cd ~/Vagrant/Amzn2 && vagrant up && vagrant ssh"
 alias dbn="cd ~/Vagrant/Debian9 && vagrant up && vagrant ssh"
 # Run Vault
-alias vlt="cd ~/Vault/unseal/ && ./unseal.sh && cd ~/Jenkins && docker-compose up -d"
+alias vlt="cd ~/Vault/unseal/ && ./unseal.sh"
+ailias jnks="cd ~/Jenkins && docker-compose up -d"
 complete -C '/usr/local/bin/aws_completer' aws
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
