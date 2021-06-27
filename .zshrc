@@ -129,3 +129,8 @@ if [ -f '/Users/kostua/Gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/k
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/kostua/Gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kostua/Gcloud/google-cloud-sdk/completion.zsh.inc'; fi
+# Requirements for kube-ps1
+export KUBE_PS1_BINARY=oc
+source /usr/local/share/kube-ps1.sh
+PROMPT='$(kube_ps1)'$PROMPT
+
