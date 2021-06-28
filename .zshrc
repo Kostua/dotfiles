@@ -133,4 +133,4 @@ if [ -f '/Users/kostua/Gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/U
 export KUBE_PS1_BINARY=oc
 source /usr/local/share/kube-ps1.sh
 PROMPT='$(kube_ps1)'$PROMPT
-
+kubeoff
