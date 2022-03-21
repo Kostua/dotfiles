@@ -10,7 +10,6 @@ Plug 'w0rp/ale'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-colorscheme gruvbox
 au BufRead,BufNewFile *.yml set filetype=yaml.ansible
 " Map movement through errors without wrapping.
 nmap <silent> <C-k> <Plug>(ale_previous)

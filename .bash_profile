@@ -11,3 +11,5 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH=~/bin:$PATH
 # export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
+
+complete -C /opt/homebrew/bin/terraform terraform

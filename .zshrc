@@ -98,9 +98,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # 
-# Run Amazon Linux 2
-alias amzn="cd ~/Vagrant/Amzn2 && vagrant up && vagrant ssh"
-alias dbn="cd ~/Vagrant/Debian9 && vagrant up && vagrant ssh"
 # Run Vault
 alias vlt="cd ~/Vault/unseal/ && ./unseal.sh"
 alias jnks="cd ~/Jenkins && docker-compose up -d"
@@ -111,26 +108,37 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 export VAULT_ADDR='http://127.0.0.1:8200'
 autoload -Uz compinit
 compinit
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export VIRTUALENVWRAPPER_PYTHON=/opt/homebrew/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Documents/Python/Projects
-export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+export PROJECT_HOME=$HOME/Python
+export VIRTUALENVWRAPPER_SCRIPT=/opt/homebrew/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_VIRTUALENV=/opt/homebrew/bin/virtualenv
+source /opt/homebrew/bin/virtualenvwrapper.sh
 export VIRTUALENVWRAPPER_WORKON_CD=1
-source /usr/local/bin/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
 export PYTHONDONTWRITEBYTECODE=1
 export HISTORY_IGNORE="(pwd|ls|ls -ltr|vault)"
 alias config='/usr/bin/git --git-dir=/Users/kostua/.cfg/ --work-tree=/Users/kostua'
 # Homebrew's sbin
 export PATH="/usr/local/sbin:$PATH"
+# Requirements for kube-ps1
+# export KUBE_PS1_BINARY=oc
+# source /usr/local/share/kube-ps1.sh
+# PROMPT='$(kube_ps1)'$PROMPT
+# kubeoff
+
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
+export LDFLAGS=-L/opt/homebrew/opt/openssl@1.1/lib
+export CPPFLAGS=-I/opt/homebrew/opt/openssl@1.1/include
+# pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+PATH=$(pyenv root)/shims:$PATH
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kostua/Gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kostua/Gcloud/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/kostua/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kostua/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/kostua/Gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kostua/Gcloud/google-cloud-sdk/completion.zsh.inc'; fi
-# Requirements for kube-ps1
-export KUBE_PS1_BINARY=oc
-source /usr/local/share/kube-ps1.sh
-PROMPT='$(kube_ps1)'$PROMPT
-kubeoff
+if [ -f '/Users/kostua/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kostua/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
