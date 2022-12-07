@@ -142,3 +142,9 @@ if [ -f '/Users/kostua/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/User
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/kostua/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kostua/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+complete -o nospace -C /opt/homebrew/Cellar/tfenv/2.2.3/versions/1.2.3/terraform terraform
+
+# Secretive
+export SSH_AUTH_SOCK=/Users/kostua/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+

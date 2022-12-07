@@ -13,3 +13,5 @@ export PATH=~/bin:$PATH
 export GOPATH=$HOME/go
 
 complete -C /opt/homebrew/bin/terraform terraform
+
+complete -C /opt/homebrew/Cellar/tfenv/2.2.3/versions/1.2.3/terraform terraform
