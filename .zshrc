@@ -103,7 +103,7 @@ alias vlt="cd ~/Vault/unseal/ && ./unseal.sh"
 alias jnks="cd ~/Jenkins && docker-compose up -d"
 complete -C '/usr/local/bin/aws_completer' aws
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/vault vault
+complete -o nospace -C /opt/homebrew/bin/vault
 complete -o nospace -C /usr/local/bin/terraform terraform
 export VAULT_ADDR='http://127.0.0.1:8200'
 autoload -Uz compinit
@@ -148,3 +148,13 @@ complete -o nospace -C /opt/homebrew/Cellar/tfenv/2.2.3/versions/1.2.3/terraform
 # Secretive
 export SSH_AUTH_SOCK=/Users/kostua/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
 
+# Git shortcuts
+## Git create a future branch
+cb() {
+    git checkout -b "feature/$1"
+}
+
+## Git create a commit
+cc() {
+    git commit -am "$1"
+}
