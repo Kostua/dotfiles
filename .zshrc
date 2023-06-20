@@ -158,3 +158,25 @@ cb() {
 cc() {
     git commit -am "$1"
 }
+
+## Git status
+alias st="git status"
+
+## Git cleanup
+git_cleanup() {
+    branch=$(git symbolic-ref --short HEAD)
+    if [ "$branch" = "main" ] || [ "$branch" = "master" ]; then
+        echo "Already on a mainline branch. Please switch to a feature branch first."
+        return 1
+    fi
+    # Check if "main" branch exists in remote
+    if git show-ref --verify --quiet refs/remotes/origin/main; then
+        git checkout main
+    else
+        git checkout master
+    fi
+    git pull
+    git branch -d $branch
+    git push origin --delete $branch
+}
+
