@@ -162,6 +162,9 @@ cc() {
 ## Git status
 alias st="git status"
 
+## Git log
+alias gl='git log --pretty=format:"%h - %an, %ar : %s"'
+
 ## Git cleanup
 git_cleanup() {
     branch=$(git symbolic-ref --short HEAD)
