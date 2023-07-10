@@ -104,7 +104,6 @@ alias jnks="cd ~/Jenkins && docker-compose up -d"
 complete -C '/usr/local/bin/aws_completer' aws
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/vault
-complete -o nospace -C /usr/local/bin/terraform terraform
 export VAULT_ADDR='http://127.0.0.1:8200'
 autoload -Uz compinit
 compinit
@@ -127,7 +126,6 @@ export PATH="/usr/local/sbin:$PATH"
 # PROMPT='$(kube_ps1)'$PROMPT
 # kubeoff
 
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 export LDFLAGS=-L/opt/homebrew/opt/openssl@1.1/lib
 export CPPFLAGS=-I/opt/homebrew/opt/openssl@1.1/include
@@ -143,7 +141,6 @@ if [ -f '/Users/kostua/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/User
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/kostua/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kostua/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
-complete -o nospace -C /opt/homebrew/Cellar/tfenv/2.2.3/versions/1.2.3/terraform terraform
 
 # Secretive
 export SSH_AUTH_SOCK=/Users/kostua/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
