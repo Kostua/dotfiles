@@ -145,10 +145,20 @@ if [ -f '/Users/kostua/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . 
 # Secretive
 export SSH_AUTH_SOCK=/Users/kostua/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
 
+# Bartib
+alias bartib="br"
+export BARTIB_FILE="/Users/kostua/activities.bartib"
+
 # Git shortcuts
+#
 ## Git create a future branch
 cb() {
     git checkout -b "feature/$1"
+}
+
+## Git create a fix branch
+cf() {
+    git checkout -b "fix/$1"
 }
 
 ## Git create a commit
@@ -157,7 +167,7 @@ cc() {
 }
 
 ## Git status
-alias st="git status"
+alias st="git status -s"
 
 ## Git log
 alias gl='git log --pretty=format:"%h - %an, %ar : %s"'
@@ -180,3 +190,6 @@ git_cleanup() {
     git push origin --delete $branch
 }
 
+## AWS assume role
+alias awd='export AWS_DEFAULT_PROFILE=default; export AWS_PROFILE=default'
+alias awa='cd /Users/kostua/.aws && source assume_role.sh'
