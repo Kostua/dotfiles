@@ -146,7 +146,7 @@ if [ -f '/Users/kostua/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . 
 export SSH_AUTH_SOCK=/Users/kostua/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
 
 # Bartib
-alias bartib="br"
+alias br="bartib"
 export BARTIB_FILE="/Users/kostua/activities.bartib"
 
 # Git shortcuts
