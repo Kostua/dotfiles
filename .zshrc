@@ -135,12 +135,6 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 PATH=$(pyenv root)/shims:$PATH
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kostua/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kostua/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/kostua/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kostua/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
 
 # Secretive
 export SSH_AUTH_SOCK=/Users/kostua/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
@@ -194,3 +188,12 @@ git_cleanup() {
 ## AWS assume role
 alias awd='export AWS_DEFAULT_PROFILE=default; export AWS_PROFILE=default'
 alias awa='cd /Users/kostua/.aws && source assume_role.sh'
+
+## ChatGPT cli
+alias chatgpt='chatgpt --model gpt-4 --init-prompt-from-file /Users/kostua/ChatGPT-shell-cli/initpormpt.txt'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/kostua/GCP/CLI/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kostua/GCP/CLI/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/kostua/GCP/CLI/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kostua/GCP/CLI/google-cloud-sdk/completion.zsh.inc'; fi
